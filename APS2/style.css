@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0d1117;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  padding: 24px;
+}
+
+.card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-header {
+  background-color: #1c2128;
+  padding: 24px;
+  border-bottom: 1px solid #30363d;
+}
+
+.badge {
+  background-color: #ff6b6b;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 99px;
+}
+
+.card-header h1 {
+  color: #e6edf3;
+  font-size: 22px;
+  margin-top: 12px;
+}
+
+.card-header p {
+  color: #7d8590;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.input-group input {
+  flex: 1;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  color: #e6edf3;
+  font-size: 16px;
+  padding: 12px 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #ff6b6b;
+}
+
+.input-group button {
+  background-color: #ff6b6b;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.input-group button:hover {
+  opacity: 0.85;
+}
+
+.erro {
+  color: #ff6b6b;
+  font-size: 13px;
+  min-height: 18px;
+}
+
+.resultado {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.resultado.visivel {
+  display: flex;
+}
+
+.pokemon-header {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pokemon-header img {
+  width: 100px;
+  height: 100px;
+  image-rendering: pixelated;
+}
+
+.pokemon-info h2 {
+  color: #e6edf3;
+  font-size: 22px;
+  text-transform: capitalize;
+}
+
+.tipos {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.tipo {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 99px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.tipo-fire     { background-color: #ff6b3540; color: #ff6b35; border: 1px solid #ff6b35; }
+.tipo-water    { background-color: #61dafb40; color: #61dafb; border: 1px solid #61dafb; }
+.tipo-grass    { background-color: #6bcb7740; color: #6bcb77; border: 1px solid #6bcb77; }
+.tipo-electric { background-color: #f7df1e40; color: #f7df1e; border: 1px solid #f7df1e; }
+.tipo-psychic  { background-color: #c084fc40; color: #c084fc; border: 1px solid #c084fc; }
+.tipo-poison   { background-color: #a855f740; color: #a855f7; border: 1px solid #a855f7; }
+.tipo-normal   { background-color: #7d859040; color: #7d8590; border: 1px solid #7d8590; }
+.tipo-flying   { background-color: #61dafb40; color: #61dafb; border: 1px solid #61dafb; }
+.tipo-bug      { background-color: #6bcb7740; color: #6bcb77; border: 1px solid #6bcb77; }
+.tipo-dragon   { background-color: #6366f140; color: #6366f1; border: 1px solid #6366f1; }
+.tipo-dark     { background-color: #30363d80; color: #7d8590; border: 1px solid #7d8590; }
+.tipo-ghost    { background-color: #6366f140; color: #6366f1; border: 1px solid #6366f1; }
+.tipo-fighting { background-color: #ff6b6b40; color: #ff6b6b; border: 1px solid #ff6b6b; }
+.tipo-rock     { background-color: #fb923c40; color: #fb923c; border: 1px solid #fb923c; }
+.tipo-ice      { background-color: #61dafb40; color: #61dafb; border: 1px solid #61dafb; }
+.tipo-steel    { background-color: #61dafb40; color: #61dafb; border: 1px solid #61dafb; }
+.tipo-fairy    { background-color: #f9a8d440; color: #f9a8d4; border: 1px solid #f9a8d4; }
+.tipo-ground   { background-color: #fb923c40; color: #fb923c; border: 1px solid #fb923c; }
+
+.campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.campo {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.campo-label {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7d8590;
+}
+
+.campo-valor {
+  font-size: 15px;
+  color: #e6edf3;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Pokemon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <span class="badge">PokeAPI</span>
+                <h1>Buscador de Pokemon</h1>
+                <p>Digite o nome ou número do Pokemon</p>
+            </div>
+
+            <div class="card-body">
+                <div class="input-group">
+                    <input type="text" id="nome" placeholder="Ex: Pikachu">
+                    <button onclick="buscarPokemon()">Buscar</button>
+                </div>
+
+                <p id="erro" class="erro"></p>
+                <div id="resultado" class="resultado">
+          <div class="pokemon-header">
+            <img id="sprite" src="" alt="">
+            <div class="pokemon-info">
+              <h2 id="nome-exibido"></h2>
+              <div id="tipos" class="tipos"></div>
+            </div>
+          </div>
+          <div class="campos">
+            <div class="campo">
+              <span class="campo-label">Altura</span>
+              <span id="altura" class="campo-valor"></span>
+            </div>
+            <div class="campo">
+              <span class="campo-label">Peso</span>
+              <span id="peso" class="campo-valor"></span>
+            </div>
+            <div class="campo">
+              <span class="campo-label">Experiencia Base</span>
+              <span id="exp" class="campo-valor"></span>
+            </div>
+            <div class="campo">
+              <span class="campo-label">Numero</span>
+              <span id="numero" class="campo-valor"></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
