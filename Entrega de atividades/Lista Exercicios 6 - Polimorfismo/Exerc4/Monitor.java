@@ -1,4 +1,4 @@
-package Polimorfismo.Exerc4;
+package Exerc4;
 
 public class Monitor extends Eletronico {
     private double tamanhoTela;

@@ -1,4 +1,4 @@
-package Polimorfismo.Exerc4;
+package Exerc4;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,6 @@ public class Main {
         Mouse mouse = new Mouse("Loja TechMix", 150.00, "Razer", "Plástico", "PC/Console",
                 90, "Compacto", "Óptico", true);
 
-        // Exercício 4 - Carrinho de compras polimórfico
         List<Produto> carrinho = new ArrayList<>();
         carrinho.add(monitor);
         carrinho.add(notebook);
@@ -31,7 +30,6 @@ public class Main {
         System.out.println();
 
         for (Produto produto : carrinho) {
-            // getDescricao() executa de forma diferente para cada tipo real do objeto
             System.out.println(produto.getDescricao());
             precoTotal += produto.getPreco();
             System.out.println();
