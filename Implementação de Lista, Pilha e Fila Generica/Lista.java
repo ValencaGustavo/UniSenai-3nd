@@ -23,9 +23,9 @@ public class Lista<T> {
     private int tamanho;
 
     public Lista() {
-        this.cabeca = null;
-        this.cauda = null;
-        this.tamanho = 0;
+        cabeca = null;
+        cauda = null;
+        tamanho = 0;
     }
 
     public void adicionar(T elemento) {
@@ -55,7 +55,6 @@ public class Lista<T> {
     }
 
     public void adicionarNaposicao(int indice, T elemento) {
-        validarElemento(elemento);
         if (indice < 0 || indice > tamanho) {
             throw new IndexOutOfBoundsException(
                     "Índice inválido: " + indice + ". Tamanho atual: " + tamanho);
@@ -68,6 +67,7 @@ public class Lista<T> {
             adicionar(elemento);
             return;
         }
+        validarElemento(elemento);
         No<T> novoNo = new No<>(elemento);
         No<T> noAtual = obterNo(indice);
         No<T> noAnterior = noAtual.anterior;

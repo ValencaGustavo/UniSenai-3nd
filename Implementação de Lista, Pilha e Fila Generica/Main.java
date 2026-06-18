@@ -78,7 +78,6 @@ public class Main {
     }
 
     private static void testarLista() {
-        System.out.println("--- LISTA (Doubly Linked List) ---");
         Lista<Double> lista = new Lista<>();
 
         System.out.println("Adicionando ao final: 1.1, 2.2, 3.3");
@@ -125,13 +124,12 @@ public class Main {
     private static void demonstrarPaciencia() {
 
         Fila<String> monteCompra = new Fila<>();
-        monteCompra.enfileirar("A♠");
-        monteCompra.enfileirar("2♠");
-        monteCompra.enfileirar("3♠");
-        monteCompra.enfileirar("K♥");
+        monteCompra.enfileirar("A");
+        monteCompra.enfileirar("2");
+        monteCompra.enfileirar("3");
+        monteCompra.enfileirar("K");
         System.out.println("Monte de compra: " + monteCompra);
 
-        // Coluna do tableau = pilha de cartas
         Pilha<String> coluna1 = new Pilha<>();
         coluna1.empilhar("K");
         coluna1.empilhar("Q");

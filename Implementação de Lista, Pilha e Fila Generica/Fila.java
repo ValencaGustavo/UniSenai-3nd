@@ -19,9 +19,9 @@ public class Fila<T> {
     private int tamanho;
 
     public Fila() {
-        this.frente = null;
-        this.fim = null;
-        this.tamanho = 0;
+        frente = null;
+        fim = null;
+        tamanho = 0;
     }
 
     public void enfileirar(T elemento) {

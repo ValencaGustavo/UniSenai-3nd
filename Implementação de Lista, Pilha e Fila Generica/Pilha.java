@@ -12,11 +12,13 @@ public class Pilha<T> {
         }
     }
 
+    private No<T> topo;
+
     private int tamanho;
 
     public Pilha() {
-        this.topo = null;
-        this.tamanho = 0;
+        topo = null;
+        tamanho = 0;
     }
 
     public void empilhar(T elemento) {
