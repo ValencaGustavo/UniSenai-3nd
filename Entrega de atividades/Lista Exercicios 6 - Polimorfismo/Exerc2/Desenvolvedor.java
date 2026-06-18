@@ -1,4 +1,4 @@
-package Heranca.Exerc2;
+package Exerc2;
 
 public class Desenvolvedor extends Funcionario {
     private String linguagem;

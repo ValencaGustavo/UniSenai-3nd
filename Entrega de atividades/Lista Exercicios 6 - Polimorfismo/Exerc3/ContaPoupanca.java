@@ -1,4 +1,4 @@
-package Heranca.Exerc3;
+package Exerc3;
 
 public class ContaPoupanca extends ContaBancaria {
     private double taxaRendimento;

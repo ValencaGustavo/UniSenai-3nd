@@ -1,4 +1,4 @@
-package Heranca.Exerc3;
+package Exerc3;
 
 public class ContaBancaria {
     private String titular;
@@ -31,7 +31,6 @@ public class ContaBancaria {
         System.out.println("Saldo: R$" + saldo);
     }
 
-    // Exercício 3 - Tarefa 2: método genérico que será sobrescrito pelas subclasses
     public String tipoDeConta() {
         return "Conta Bancária";
     }

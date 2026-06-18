@@ -1,4 +1,4 @@
-package Heranca.Exerc1;
+package Exerc1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,6 @@ public class Main {
         moto.frear(29);
         caminhao.frear(40);
 
-        // Exercício 1 - Tarefa 4: lista polimórfica
         List<Veiculo> veiculos = new ArrayList<>();
         veiculos.add(carro);
         veiculos.add(moto);
@@ -29,8 +28,6 @@ public class Main {
         System.out.println();
 
         for (Veiculo veiculo : veiculos) {
-            // Em tempo de execução, o Java decide qual exibirDados() e
-            // qual tipoDeVeiculo() executar, de acordo com o tipo real do objeto.
             System.out.println("Tipo de veículo: " + veiculo.tipoDeVeiculo());
             veiculo.exibirDados();
             System.out.println();

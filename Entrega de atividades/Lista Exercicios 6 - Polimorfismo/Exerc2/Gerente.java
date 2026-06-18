@@ -1,4 +1,4 @@
-package Heranca.Exerc2;
+package Exerc2;
 
 public class Gerente extends Funcionario {
     private double bonus;

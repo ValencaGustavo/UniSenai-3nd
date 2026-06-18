@@ -1,4 +1,4 @@
-package Heranca.Exerc1;
+package Exerc1;
 
 public class Caminhao extends Veiculo {
     private double capacidadeCarga;

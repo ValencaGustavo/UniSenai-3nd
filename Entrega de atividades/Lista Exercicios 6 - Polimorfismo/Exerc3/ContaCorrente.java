@@ -1,4 +1,4 @@
-package Heranca.Exerc3;
+package Exerc3;
 
 public class ContaCorrente extends ContaBancaria {
     private double taxaManutencao;

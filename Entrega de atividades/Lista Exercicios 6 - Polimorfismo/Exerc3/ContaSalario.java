@@ -1,4 +1,4 @@
-package Heranca.Exerc3;
+package Exerc3;
 
 public class ContaSalario extends ContaBancaria {
     private String empresa;

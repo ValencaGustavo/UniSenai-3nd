@@ -1,4 +1,4 @@
-package Heranca.Exerc2;
+package Exerc2;
 
 public class Estagiario extends Funcionario {
 

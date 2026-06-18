@@ -1,4 +1,4 @@
-package Heranca.Exerc3;
+package Exerc3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,6 @@ public class Main {
         ContaPoupanca cp = new ContaPoupanca("Adriano", 2000, "002-2", 0.5);
         ContaSalario cs = new ContaSalario("Gustavo", 0, "003-3", "Google");
 
-        // Exercício 3 - Tarefa 4: lista polimórfica de contas
         List<ContaBancaria> contas = new ArrayList<>();
         contas.add(cc);
         contas.add(cp);

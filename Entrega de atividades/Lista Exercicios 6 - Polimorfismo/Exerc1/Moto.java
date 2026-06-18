@@ -1,4 +1,4 @@
-package Heranca.Exerc1;
+package Exerc1;
 
 public class Moto extends Veiculo {
     private boolean temPartidaEletrica;

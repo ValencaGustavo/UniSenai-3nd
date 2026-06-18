@@ -1,4 +1,4 @@
-package Heranca.Exerc1;
+package Exerc1;
 
 public class Veiculo {
     private String marca;
@@ -31,7 +31,6 @@ public class Veiculo {
         System.out.println("Velocidade atual: " + velocidadeAtual);
     }
 
-    // Exercício 1 - Tarefa 2: método genérico que será sobrescrito pelas subclasses
     public String tipoDeVeiculo() {
         return "Veículo";
     }
