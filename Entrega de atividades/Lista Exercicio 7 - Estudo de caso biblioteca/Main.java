@@ -16,18 +16,26 @@ public class Main {
             opcao = lerInteiro("Escolha uma opção: ");
 
             switch (opcao) {
-                case 1 -> menuLivros();
-                case 2 -> menuUsuarios();
-                case 3 -> menuEmprestimos();
-                case 0 -> System.out.println("Encerrando o sistema. Até mais!");
-                default -> System.out.println("Opção inválida.");
+                case 1:
+                    menuLivros();
+                    break;
+                case 2:
+                    menuUsuarios();
+                    break;
+                case 3:
+                    menuEmprestimos();
+                    break;
+                case 0:
+                    System.out.println("Encerrando o sistema. Até mais!");
+                    break;
+                default:
+                    System.out.println("Opção inválida.");
+                    break;
             }
         } while (opcao != 0);
 
         scanner.close();
     }
-
-    // ========================= MENU PRINCIPAL =========================
 
     private static void exibirMenuPrincipal() {
         System.out.println("\n===== BIBLIOTECA MUNICIPAL =====");
@@ -36,8 +44,6 @@ public class Main {
         System.out.println("3. Gerenciar Empréstimos (Exercício 3)");
         System.out.println("0. Sair");
     }
-
-    // ========================= EXERCÍCIO 1: LIVROS =========================
 
     private static void menuLivros() {
         int opcao;
@@ -50,11 +56,21 @@ public class Main {
             opcao = lerInteiro("Escolha uma opção: ");
 
             switch (opcao) {
-                case 1 -> cadastrarLivro();
-                case 2 -> removerLivro();
-                case 3 -> listarLivros();
-                case 0 -> System.out.println("Voltando...");
-                default -> System.out.println("Opção inválida.");
+                case 1:
+                    cadastrarLivro();
+                    break;
+                case 2:
+                    removerLivro();
+                    break;
+                case 3:
+                    listarLivros();
+                    break;
+                case 0:
+                    System.out.println("Voltando...");
+                    break;
+                default:
+                    System.out.println("Opção inválida.");
+                    break;
             }
         } while (opcao != 0);
     }
@@ -76,25 +92,30 @@ public class Main {
         String autor = lerTexto("Autor: ");
 
         switch (tipo) {
-            case 1 -> {
+            case 1: {
                 int paginas = lerInteiro("Número de páginas: ");
                 int estante = lerInteiro("Número da estante: ");
                 biblioteca.cadastrarLivro(new LivroFisico(codigo, titulo, autor, paginas, estante));
                 System.out.println("Livro físico cadastrado com sucesso!");
+                break;
             }
-            case 2 -> {
+            case 2: {
                 int paginas = lerInteiro("Número de páginas: ");
                 String link = lerTexto("Link de download: ");
                 biblioteca.cadastrarLivro(new Ebook(codigo, titulo, autor, paginas, link));
                 System.out.println("E-book cadastrado com sucesso!");
+                break;
             }
-            case 3 -> {
+            case 3: {
                 int duracao = lerInteiro("Duração total (em minutos): ");
                 String narrador = lerTexto("Nome do narrador: ");
                 biblioteca.cadastrarLivro(new Audiobook(codigo, titulo, autor, duracao, narrador));
                 System.out.println("Audiobook cadastrado com sucesso!");
+                break;
             }
-            default -> System.out.println("Tipo inválido. Cadastro cancelado.");
+            default:
+                System.out.println("Tipo inválido. Cadastro cancelado.");
+                break;
         }
     }
 
@@ -116,8 +137,6 @@ public class Main {
         }
     }
 
-    // ========================= EXERCÍCIO 2: USUÁRIOS =========================
-
     private static void menuUsuarios() {
         int opcao;
         do {
@@ -129,11 +148,21 @@ public class Main {
             opcao = lerInteiro("Escolha uma opção: ");
 
             switch (opcao) {
-                case 1 -> cadastrarUsuario();
-                case 2 -> removerUsuario();
-                case 3 -> listarUsuarios();
-                case 0 -> System.out.println("Voltando...");
-                default -> System.out.println("Opção inválida.");
+                case 1:
+                    cadastrarUsuario();
+                    break;
+                case 2:
+                    removerUsuario();
+                    break;
+                case 3:
+                    listarUsuarios();
+                    break;
+                case 0:
+                    System.out.println("Voltando...");
+                    break;
+                default:
+                    System.out.println("Opção inválida.");
+                    break;
             }
         } while (opcao != 0);
     }
@@ -153,21 +182,25 @@ public class Main {
         String nome = lerTexto("Nome completo: ");
 
         switch (tipo) {
-            case 1 -> {
+            case 1: {
                 int idade = lerInteiro("Idade: ");
                 String curso = lerTexto("Curso matriculado: ");
                 String matricula = lerTexto("Número da matrícula: ");
                 biblioteca.cadastrarUsuario(new Aluno(codigo, nome, idade, curso, matricula));
                 System.out.println("Aluno cadastrado com sucesso!");
+                break;
             }
-            case 2 -> {
+            case 2: {
                 String area = lerTexto("Área de atuação: ");
                 String departamento = lerTexto("Departamento: ");
                 String email = lerTexto("E-mail institucional: ");
                 biblioteca.cadastrarUsuario(new Professor(codigo, nome, area, departamento, email));
                 System.out.println("Professor cadastrado com sucesso!");
+                break;
             }
-            default -> System.out.println("Tipo inválido. Cadastro cancelado.");
+            default:
+                System.out.println("Tipo inválido. Cadastro cancelado.");
+                break;
         }
     }
 
@@ -205,8 +238,6 @@ public class Main {
         if (!temProfessor) System.out.println("Nenhum professor cadastrado.");
     }
 
-    // ========================= EXERCÍCIO 3: EMPRÉSTIMOS =========================
-
     private static void menuEmprestimos() {
         int opcao;
         do {
@@ -219,12 +250,24 @@ public class Main {
             opcao = lerInteiro("Escolha uma opção: ");
 
             switch (opcao) {
-                case 1 -> realizarEmprestimo();
-                case 2 -> registrarDevolucao();
-                case 3 -> listarEmprestimosAtivos();
-                case 4 -> consultarHistorico();
-                case 0 -> System.out.println("Voltando...");
-                default -> System.out.println("Opção inválida.");
+                case 1:
+                    realizarEmprestimo();
+                    break;
+                case 2:
+                    registrarDevolucao();
+                    break;
+                case 3:
+                    listarEmprestimosAtivos();
+                    break;
+                case 4:
+                    consultarHistorico();
+                    break;
+                case 0:
+                    System.out.println("Voltando...");
+                    break;
+                default:
+                    System.out.println("Opção inválida.");
+                    break;
             }
         } while (opcao != 0);
     }
@@ -306,8 +349,6 @@ public class Main {
                     " | Situação: " + situacao);
         }
     }
-
-    // ========================= UTILITÁRIOS DE LEITURA =========================
 
     private static int lerInteiro(String mensagem) {
         System.out.print(mensagem);
